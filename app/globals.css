@@ -1,0 +1,180 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Automotive Professional Theme - Dark Teal with Coral Accents */
+  --color-bg: hsl(195, 25%, 15%);
+  --color-fg: hsl(195, 15%, 95%);
+  --color-accent: #ff6b6b;
+  --color-primary: hsl(195, 80%, 50%);
+  --color-surface: hsl(195, 20%, 18%);
+  --color-text-primary: hsl(195, 15%, 95%);
+  --color-text-secondary: hsl(195, 10%, 75%);
+  --color-border: hsl(195, 15%, 25%);
+  --color-success: hsl(142, 76%, 36%);
+  --color-warning: hsl(38, 92%, 50%);
+  --color-error: hsl(0, 84%, 60%);
+}
+
+[data-theme="celo"] {
+  --color-bg: hsl(0, 0%, 0%);
+  --color-fg: hsl(0, 0%, 100%);
+  --color-accent: #fbcc5c;
+  --color-primary: #fbcc5c;
+  --color-surface: hsl(0, 0%, 5%);
+  --color-text-primary: hsl(0, 0%, 100%);
+  --color-text-secondary: hsl(0, 0%, 70%);
+  --color-border: hsl(0, 0%, 20%);
+  --color-success: #00d4aa;
+  --color-warning: #fbcc5c;
+  --color-error: #ff6b6b;
+}
+
+[data-theme="solana"] {
+  --color-bg: hsl(260, 30%, 10%);
+  --color-fg: hsl(0, 0%, 100%);
+  --color-accent: #9945ff;
+  --color-primary: #14f195;
+  --color-surface: hsl(260, 25%, 15%);
+  --color-text-primary: hsl(0, 0%, 100%);
+  --color-text-secondary: hsl(260, 10%, 75%);
+  --color-border: hsl(260, 15%, 25%);
+  --color-success: #14f195;
+  --color-warning: #ffb800;
+  --color-error: #ff6b6b;
+}
+
+[data-theme="base"] {
+  --color-bg: hsl(220, 30%, 10%);
+  --color-fg: hsl(220, 15%, 95%);
+  --color-accent: #0052ff;
+  --color-primary: #0052ff;
+  --color-surface: hsl(220, 25%, 15%);
+  --color-text-primary: hsl(220, 15%, 95%);
+  --color-text-secondary: hsl(220, 10%, 75%);
+  --color-border: hsl(220, 15%, 25%);
+  --color-success: #00d4aa;
+  --color-warning: #ffb800;
+  --color-error: #ff6b6b;
+}
+
+[data-theme="coinbase"] {
+  --color-bg: hsl(220, 40%, 8%);
+  --color-fg: hsl(220, 15%, 95%);
+  --color-accent: #0052ff;
+  --color-primary: #0052ff;
+  --color-surface: hsl(220, 35%, 12%);
+  --color-text-primary: hsl(220, 15%, 95%);
+  --color-text-secondary: hsl(220, 10%, 75%);
+  --color-border: hsl(220, 20%, 20%);
+  --color-success: #00d4aa;
+  --color-warning: #ffb800;
+  --color-error: #ff6b6b;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  
+  body {
+    background: var(--color-bg);
+    color: var(--color-fg);
+    font-feature-settings: "rlig" 1, "calt" 1;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .glass-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .metric-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    transition: all 0.2s ease;
+  }
+
+  .metric-card:hover {
+    background: rgba(255, 255, 255, 0.02);
+    border-color: var(--color-accent);
+    transform: translateY(-2px);
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, var(--color-accent), var(--color-primary));
+    color: white;
+    border: none;
+    transition: all 0.2s ease;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 25px rgba(255, 107, 107, 0.3);
+  }
+
+  .btn-secondary {
+    background: var(--color-surface);
+    color: var(--color-fg);
+    border: 1px solid var(--color-border);
+    transition: all 0.2s ease;
+  }
+
+  .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--color-accent);
+  }
+
+  .diagnostic-status-pending {
+    background: linear-gradient(135deg, #fbbf24, #f59e0b);
+    color: white;
+  }
+
+  .diagnostic-status-completed {
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: white;
+  }
+
+  .diagnostic-status-failed {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    color: white;
+  }
+
+  .upload-zone {
+    border: 2px dashed var(--color-border);
+    background: rgba(255, 255, 255, 0.02);
+    transition: all 0.3s ease;
+  }
+
+  .upload-zone:hover {
+    border-color: var(--color-accent);
+    background: rgba(255, 107, 107, 0.05);
+  }
+
+  .upload-zone.dragover {
+    border-color: var(--color-accent);
+    background: rgba(255, 107, 107, 0.1);
+    transform: scale(1.02);
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(135deg, var(--color-accent), var(--color-primary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+}
