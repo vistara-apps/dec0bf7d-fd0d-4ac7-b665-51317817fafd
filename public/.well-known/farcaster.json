@@ -1,0 +1,30 @@
+{
+  "accountAssociation": {
+    "header": "",
+    "payload": "",
+    "signature": ""
+  },
+  "frame": {
+    "version": "1",
+    "name": "AutoDiagnostics AI",
+    "subtitle": "Built with Zara",
+    "description": "AutoDiagnostics AI is a Base Mini App built with Zara.",
+    "iconUrl": "https://0co.to/images/zara-2.png",
+    "homeUrl": "https://dec0bf7dfd0d4ac7b66551317817fafd-01do.vercel.app",
+    "splashImageUrl": "https://dec0bf7dfd0d4ac7b66551317817fafd-01do.vercel.app/splash.png",
+    "splashBackgroundColor": "#000000",
+    "heroImageUrl": "https://dec0bf7dfd0d4ac7b66551317817fafd-01do.vercel.app/image.png",
+    "tagline": "AutoDiagnostics AI",
+    "screenshotUrls": [
+      "https://dec0bf7dfd0d4ac7b66551317817fafd-01do.vercel.app/screenshot.png",
+      "https://dec0bf7dfd0d4ac7b66551317817fafd-01do.vercel.app/screenshot.png"
+    ],
+    "primaryCategory": "social",
+    "tags": [
+      "base",
+      "miniapp",
+      "onchainkit"
+    ],
+    "webhookUrl": "https://dec0bf7dfd0d4ac7b66551317817fafd-01do.vercel.app/api/webhook"
+  }
+}

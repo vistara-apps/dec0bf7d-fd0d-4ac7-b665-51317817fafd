@@ -1,0 +1,14 @@
+{
+  "name": "AutoDiagnostics AI",
+  "description": "AutoDiagnostics AI is a Base Mini App built with Zara.",
+  "image": "https://dummyimage.com/1200x628/0a0b0d/ffffff.png&text=OG",
+  "external_url": "https://dec0bf7d-fd0d-4ac7-b665-51317817fafd.vercel.app",
+  "properties": {
+    "app": {
+      "name": "AutoDiagnostics AI",
+      "description": "AutoDiagnostics AI is a Base Mini App built with Zara.",
+      "url": "https://dec0bf7d-fd0d-4ac7-b665-51317817fafd.vercel.app",
+      "icon": "https://0co.to/images/zara-2.png"
+    }
+  }
+}
